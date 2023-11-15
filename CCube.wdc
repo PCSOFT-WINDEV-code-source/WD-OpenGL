@@ -1,0 +1,171 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CCube
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d4929593acc28eb
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CCube est une classe
+      	herite de Cfigure
+      	
+      	// Couleur des faces
+      	m_CouleurFace1 est un entier
+      	m_CouleurFace2 est un entier
+      	m_CouleurFace3 est un entier
+      	m_CouleurFace4 est un entier
+      	m_CouleurFace5 est un entier
+      	m_CouleurFace6 est un entier
+      Fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 4416106372883687659
+     type_code : 27
+     code : |1-
+      Procédure Constructeur()
+      Constructeur CFigure()
+      
+      :SetCouleurFace()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 4416106372861536491
+     type_code : 28
+     code : |1+
+      Procédure Destructeur()
+      
+     type : 655360
+   -
+     name : Dessine
+     internal_properties : CAAAAAgAAADwL2PbiBr9vkrAFq92yrIQ9iWk7xEEDQEmQRowKANEQYXBnDGSvQ9zIMmyinNgB9KpukD48be7FxRSEbslM9odq+3+jB8aedSlfj6F2DWO1c4IxBFU7wViUF+sFkccNQ3cu+bgWAIQaRu5SEu6JX0rUfwiSuqthRG5ffrt4x5Xtk48Gb8v/F9fXRVCHck9730biSw9Wf75XdVHLORPpa9t5hSX92qSqNYW8ReCojIz1ZZe6gBs3BZ8fCAzXkduaz7TaZJVx2eEru+hxkjUZbqbEel8ohv5P07oHDQAY0MrRHojsFcdwhw3LAngJzkIjHstXfblC612+uWQodCAeaEvIAFLcrOqX7EHrEJE2gFtb9BR5ijQo8aIgW5NeqSbYBSgBRNcuVY6lOMa8P6RfjHc0lWaEez8ZtPqFMT/Hx7YQDhK6Q6WdUhphrf/T3C3BV/ApyPxcSeIkbUHQX44FPbqrFB6Vv/45YDY7wgLimonmJ6jcZCucZFDV0bH/XUcrQtxQTBhsdvBhKeYPg5gKnAGzVk=
+     procedure_id : 4416125411644394335
+     type_code : 12
+     code : |1+
+      Procédure virtuelle Dessine()
+      			
+      // Déplacement dans l'espace
+      :Déplace()
+      
+      // Début du dessin
+      API("Opengl32.dll", "glBegin", ::GL_QUADS)				
+      
+      ///////////////////////  FACE 1  //////////////////////////
+      // Couleur de cette face
+      :SetCouleur(:m_CouleurFace1); :Colorie()
+      API("Opengl32.dll", "glNormal3d", 0.0, 1.0, 0.0)
+      API("Opengl32.dll", "glVertex3d",  1.0, 1.0 ,-1.0 )		// Coin Haut droit (Haut)
+      API("Opengl32.dll", "glVertex3d", -1.0, 1.0 ,-1.0 )		// Coin Haut gauche (Haut)
+      API("Opengl32.dll", "glVertex3d", -1.0, 1.0 , 1.0 )		// Coin bas gauche (Haut)
+      API("Opengl32.dll", "glVertex3d",  1.0, 1.0 , 1.0 )		// Coin bas droit (Haut)
+      
+      
+      ///////////////////////  FACE 2  //////////////////////////
+      // Couleur de cette face
+      :SetCouleur(:m_CouleurFace2); :Colorie()
+      API("Opengl32.dll", "glNormal3d", 0.0, -1.0, 0.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 , 1.0 )		// Coin Haut droit (Bas)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 , 1.0 )		// Coin Haut gauche (Bas)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 ,-1.0 )		// Coin bas gauche (Bas)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 ,-1.0 )		// Coin bas droit (Bas)
+      
+      
+      ///////////////////////  FACE 3  //////////////////////////
+      // Couleur de cette face
+      :SetCouleur(:m_CouleurFace3); :Colorie()
+      API("Opengl32.dll", "glNormal3d", 0.0, 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 , 1.0 )		// Coin Haut droit (Devant)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 , 1.0 )		// Coin Haut gauche (Devant)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 , 1.0 )		// Coin bas gauche (Devant)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 , 1.0 )		// Coin bas droit (Devant)
+      
+      
+      ///////////////////////  FACE 4  //////////////////////////
+      // Couleur de cette face
+      :SetCouleur(:m_CouleurFace4); :Colorie()
+      API("Opengl32.dll", "glNormal3d", 0.0, 0.0, -1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 ,-1.0 )		// Coin Haut droit (Arrière)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 ,-1.0 )		// Coin Haut gauche (Arrière)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 ,-1.0 )		// Coin bas gauche (Arrière)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 ,-1.0 )		// Coin bas droit (Arrière)
+      
+      
+      ///////////////////////  FACE 5  //////////////////////////
+      // Couleur de cette face
+      :SetCouleur(:m_CouleurFace5); :Colorie()
+      API("Opengl32.dll", "glNormal3d", -1.0, 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 , 1.0 )		// Coin Haut droit (Gauche)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 ,-1.0 )		// Coin Haut gauche (Gauche)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 ,-1.0 )		// Coin bas gauche (Gauche)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 , 1.0 )		// Coin bas droit (Gauche)
+      
+      
+      ///////////////////////  FACE 6  //////////////////////////
+      // Couleur de cette face
+      :SetCouleur(:m_CouleurFace6); :Colorie()
+      API("Opengl32.dll", "glNormal3d", 1.0, 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 ,-1.0 )		// Coin Haut droit (Droite)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 , 1.0 )		// Coin Haut gauche (Droite)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 , 1.0 )		// Coin bas gauche (Droite)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 ,-1.0 )		// Coin bas droit (Droite)
+      
+      // Fin du dessin
+      API("Opengl32.dll", "glEnd")
+     type : 458752
+   -
+     name : SetCouleurFace
+     procedure_id : 4416447375218999170
+     type_code : 12
+     code : |1+
+      Procédure SetCouleurFace(pnCouleurFace1 = RVB(255,0,0), pnCouleurFace2="" , pnCouleurFace3="", ...
+      							 pnCouleurFace4="", pnCouleurFace5="" , pnCouleurFace6="")
+      
+      :m_CouleurFace1 = pnCouleurFace1
+      
+      // Par défaut toutes les faces ont la couleur de la face 1
+      si pnCouleurFace2="" alors
+      	:m_CouleurFace2 = pnCouleurFace1
+      sinon
+      	:m_CouleurFace2 = pnCouleurFace2
+      FIN
+      si pnCouleurFace3="" alors
+      	:m_CouleurFace3 = pnCouleurFace1
+      sinon
+      	:m_CouleurFace3 = pnCouleurFace3
+      FIN
+      si pnCouleurFace4="" alors
+      	:m_CouleurFace4 = pnCouleurFace1
+      sinon
+      	:m_CouleurFace4 = pnCouleurFace4
+      FIN
+      si pnCouleurFace5="" alors
+      	:m_CouleurFace5 = pnCouleurFace1
+      sinon
+      	:m_CouleurFace5 = pnCouleurFace5
+      FIN
+      si pnCouleurFace6="" alors
+      	:m_CouleurFace6 = pnCouleurFace1
+      sinon
+      	:m_CouleurFace6 = pnCouleurFace6
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1fc4cfb40085281b
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

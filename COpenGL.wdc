@@ -1,0 +1,502 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COpenGL
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d465ea134212060
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAACNlmfeB7dqfmejWX+MC3IrjGiUHDAxGDCaT8rsK1c0tzlYn89tqyqlxsXe00onqSpW0Zenw2+dO5f11TNWx1LzqqRR46DtlPEtBmsi3P4z3TSDwk2anoIrR9WpVV4emyGuUTEMheGjyJKJXoQF1hEDDjp0q8aPsk7Krzu0T+MDLDVS7crptgWa5RaX1DmFvYggr4nhoTifnZtW2z2UJOyKIr0ecSh53rxAOdR6ov3m8P0R0mM0aZ6ttGUHuJKGigi2NxnqA+mGkj/gADNseQRbAToqHzlOJJaTPJsNmnefzIz9hX4Dh0kVcOvkNbCX3Q3mS8C3
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAADrzQL1MV7y9o8MP/rkr9Dpo71svCgNQ1tPcpOAqLVv77G8Tlgz0HGNWEMjtCgGfV43mtrw4BTiNE6t2M2gMN50vUHEywXsWMgUnvLsFhI4Sls5iKP6K8Y3sBi9FNcBtySlRTfh4gfeRjQ214w=
+     code : |1+
+      // Initialisation
+      PIXELFORMATDESCRIPTOR est une structure  
+      	nSize est un entier sur 2 octets
+      	nVersion est un entier sur 2 octets
+      	dwFlags est un entier sur 4 octets
+      	iPixelType  est un entier sur 1 octet
+      	cColorBits est un entier sur 1 octet
+      	cRedBits est un entier sur 1 octet
+      	cRedShift est un entier sur 1 octet
+      	cGreenBits est un entier sur 1 octet
+      	cGreenShift est un entier sur 1 octet
+      	cBlueBits est un entier sur 1 octet
+      	cBlueShift est un entier sur 1 octet
+      	cAlphaBits est un entier sur 1 octet
+      	cAlphaShift est un entier sur 1 octet
+      	cAccumBits est un entier sur 1 octet
+      	cAccumRedBits est un entier sur 1 octet
+      	cAccumGreenBits est un entier sur 1 octet
+      	cAccumBlueBits est un entier sur 1 octet
+      	cAccumAlphaBits est un entier sur 1 octet
+      	cDepthBits est un entier sur 1 octet
+      	cStencilBits est un entier sur 1 octet
+      	cAuxBuffers est un entier sur 1 octet
+      	iLayerType est un entier sur 1 octet
+      	bReserved est un entier sur 1 octet
+      	dwLayerMask est un entier  sur 4 octets
+      	dwVisibleMask est un entier sur 4 octets
+      	dwDamageMask est un entier sur 4 octets
+      FIN
+      
+      COpenGL est une classe
+      	m_sChamp est une chaine						// Nom du champ 3D
+      	m_hdc est un entier							// Device context du champ
+      	m_hglrc est un entier						// Contexte OpenGL
+      	m_xTabFigure est un tableau dynamique 		// Tableau contenant les figures 3D
+      	m_nLastPosX, m_nLastPosY sont des entiers	// Dernière position souris
+      	m_XRotCaméra, m_YRotCaméra, m_ZRotCaméra sont des reels	// Rotation de la caméra		
+      	m_XTransCaméra, m_YTransCaméra, m_ZTransCaméra sont des reels	// Rotation de la caméra		
+      	
+      	constante
+      		GL_LIGHT0 = 0x4000
+      		GL_LIGHTING = 0x0B50
+      		GL_DEPTH_TEST = 0x0B71
+      		GL_PROJECTION = 5889
+      		GL_MODELVIEW = 0x1700
+      		GL_LEQUAL = 515
+      		GL_DEPTH_BUFFER_BIT = 0x100
+      		GL_COLOR_BUFFER_BIT = 0x4000
+      		GL_PERSPECTIVE_CORRECTION_HINT = 3152
+      		GL_NICEST = 4354
+      		GL_COLOR_MATERIAL = 2903
+      		GL_AMBIENT_AND_DIFFUSE = 5634
+      		GL_FACEFRONT = 1028
+      		PFD_DRAW_TO_WINDOW = 4
+      		PFD_SUPPORT_OPENGL = 32
+      		PFD_DOUBLEBUFFER = 1
+      		PFD_TYPE_RGBA = 0
+      		PFD_MAIN_PLANE = 0
+      		GL_DIFFUSE = 0x1201
+      		GL_POSITION = 0x1203
+      		GL_TEXTURE_2D = 3553 
+      		GL_UNSIGNED_BYTE = 5121
+      		GL_TEXTURE_MIN_FILTER = 10241
+      		GL_RGBA = 6408
+      		GL_NEAREST = 9728
+      		GL_LINEAR = 9729
+      		GL_TEXTURE_MAG_FILTER = 10240 
+      		GL_QUADS = 0x0007
+      		GL_SMOOTH = 0x1D01
+      		GL_COMPILE = 4864
+      	fin
+      FIN
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     internal_properties : CAAAAAgAAABuQQng1zx74TK+dtOUzBREFVEIaBO2kmi7W8cHkf+P23zSrBRHcBkaweebPd0ZVrF4RtBc946XUuEdZZDdYtl/6BotEJp10WcI6i9PcoEbkge22X+9q8RmcQIG2P/YWadx3KzKtOUDMofCjxnaBy1DKtgKzOwdQf+HLCrtdSNBFCADG5Gygk424otV3dc1C9e+pIk6z0yUzPoxm+cU3kna
+     procedure_id : 4415320530522415215
+     type_code : 27
+     code : |1+
+      Procédure Constructeur(psChamp)
+      
+      // Chargement des DLL
+      ChargeDLL("gdi32.dll")
+      ChargeDLL("Opengl32.dll")
+      
+      // Champ où l'OpenGL va travailler
+      :m_sChamp = psChamp
+      
+      // Tableau contenant les figures 3D
+      :m_xTabFigure = allouer un tableau dynamique de 0 CFigure dynamique
+     type : 589824
+   -
+     name : Destructeur
+     internal_properties : CAAAAAgAAAD2VS1QNGgU0Y9holZXQ7EQkKSF81v8f5aWZxzfmDiG0oSDOyaGBt5WPvQW/hqVH9i/am0yGmkZfGfIipXCRQjhdJ+OVthtbXgUOZeeIKfayTo2NACI89Y8vOibniStxSUSLo+DE4nFGlpE0uvFNh9VlxxRkSNNUY36JF/LbEZlbEHhkp4x5EzyxcXC+3bwu+SCIZeQF5X5s0p8gJH9f/U=
+     procedure_id : 4415320531991208047
+     type_code : 28
+     code : |1-
+      Procédure Destructeur()
+      
+      quand exception dans 
+      	// Libération de tous les objets
+      	:SupprimeFigure()
+      	
+      	// Libération mémoire
+      	API("opengl32.dll", "wglMakeCurrent", Null, Null)
+      	API("opengl32.dll", "wglDeleteContext",:m_hglrc)
+      	SysLibereDC()
+      faire
+      	// rien
+      fin
+     type : 655360
+   -
+     name : InitChamp
+     internal_properties : CAAAAAgAAABDxp3NmrQljJGTycV817jIsEQO0LGXmTklORAFUfvBUDicqfyh7TLHzPEUm8ciDfA7Au+SJZOmkWMDcmFaALJ0tqk7wBXhxYDOB8Hhus+CCKOp1RGA2cR2+VDJg8p7hwKGupYcDc/lZhQQs2TvDNHl123BfZpJTzFlj55McTUswGnjk27q8miFm4Fdvw0sDIdcRyKaCttAAP51BLv4qMVHfHIXfHGpGDOQj/grVNgZG1RmzQMEuilgsVRJwUlIMsbPQctawccSKuFwXkzFUtQSOAla2REXscgztzpWvMnIE/SgX4zTzBEN3RJdAMlwY7V+LwsyiCsTPnDdv+Q=
+     procedure_id : 4415320578263895450
+     type_code : 12
+     code : |1+
+      Procédure InitChamp()
+      // Initialisation du champ où l'OpenGL va travailler
+      
+      pfd est un PIXELFORMATDESCRIPTOR
+      iPixelFormat est un entier
+      
+      // Device Context du champ utilisé
+      :m_hdc = SysRécupèreDC(Handle(:m_sChamp))
+      SI :m_hdc=Null renvoyer faux
+      
+      // Définition du format de pixel
+      pfd:nSize = Dimension(pfd)
+      pfd:nVersion = 1
+      pfd:dwFlags = ::PFD_SUPPORT_OPENGL+::PFD_DRAW_TO_WINDOW+::PFD_DOUBLEBUFFER
+      pfd:iPixelType = ::PFD_TYPE_RGBA
+      pfd:cColorBits = 24
+      pfd:cDepthBits = 16
+      pfd:iLayerType = ::PFD_MAIN_PLANE
+      
+      // Affectation du format défini
+      iPixelFormat = API("gdi32.dll", "ChoosePixelFormat", :m_hdc, &pfd)
+      SI iPixelFormat = 0 ALORS
+      	Erreur(<§$0000§>)
+      	RENVOYER Faux
+      FIN
+      SI PAS API("gdi32.dll", "SetPixelFormat", :m_hdc, iPixelFormat, &pfd)
+      	Erreur(<§$0001§>)
+      	RENVOYER Faux
+      FIN
+      
+      // Création du contexte OpenGL
+      :m_hglrc = API("opengl32.dll", "wglCreateContext", :m_hdc)
+      SI :m_hglrc=Null ALORS
+      	Erreur(<§$0002§>+API("Kernel32.dll", "GetLastError"),"", <§$0003§>, <§$0004§>, <§$0005§>, <§$0006§>, <§$0007§>)
+      	RENVOYER Faux
+      FIN
+      SI PAS API("Opengl32.dll", "wglMakeCurrent", :m_hdc, :m_hglrc) ALORS
+      	Erreur("wglMakeCurrent failed")
+      	RENVOYER Faux
+      FIN
+      
+      // A chaque repaint il faut redemander à OpenGL de redessiner
+      Evénement(":Dessine", :m_sChamp, 15)  // WM_PAINT
+      
+      // Evénement pour gérer les touches clavier PgUp et PgDown
+      Evénement(":ToucheEnfonce", "*.*", 256) // WM_KEYDOWN
+      
+      // Evenement pour gérer la molette de la souris
+      Evénement(":MoletteSouris", "*.*", 0x020A)
+      
+      RENVOYER Vrai
+     type : 458752
+   -
+     name : InitGL
+     internal_properties : CAAAAAgAAACQ8B9fNSfG7x416xYAMAc4WI39MW/8OKqa8xndIAq+yR5A2jIuGhV26Gu6L/GUUbcM6vgWoKR42jgIZziQtfuTplne8qBl9jL27EiK30ZzJz0PxnZ4rQZpBgsv5975SdCRjrJ25SUQKYZbZMu3v7nzQsu/OUUNPk9VHFsBz8cfJBFkRNtTvf8GlYm+ULD9meY1CATW7JUyvp3ius0cdj/I7c1i6w4w7wSaq6+AWBClLUi7EFJyOakpfhLigUonJM1LHEOqEXMmO/wmn5g2nhBimi11IV0sfnmUOh+FZnt8iUfJAAMYfmKJfalCfEGo2fk++itMsJVQiFBjnMQmzY8yHS2NWg==
+     procedure_id : 4416108008575072141
+     type_code : 12
+     code : |1-
+      Procédure InitGL()
+      // Initialisation des différents paramètres (couleur, profondeur, lumière, texture)
+      
+      // Initialisation de la couleur de fond
+      n1,n2,n3,n4 sont des réels sur 4 octets
+      n1=0.2;n2=0.2;n3=0.2;n4=1.0
+      API("Opengl32.dll", "glClearColor", n1, n2, n3, n4) 
+      
+      // Couleur
+      API("Opengl32.dll", "glEnable", ::GL_COLOR_MATERIAL)
+      API("Opengl32.dll", "glColorMaterial", ::GL_FACEFRONT, ::GL_AMBIENT_AND_DIFFUSE)
+      
+      // Profondeur
+      API("Opengl32.dll", "glClearDepth", 1.0 )			
+      API("Opengl32.dll", "glEnable", ::GL_DEPTH_TEST)		
+      API("Opengl32.dll", "glDepthFunc", ::GL_LEQUAL)	
+      
+      // Lumière
+      API("Opengl32.dll", "glEnable", ::GL_LIGHTING)
+      API("Opengl32.dll", "glEnable", ::GL_LIGHT0)
+      
+      // Amélioration des perspectives
+      API("Opengl32.dll", "glHint", ::GL_PERSPECTIVE_CORRECTION_HINT, ::GL_NICEST)
+      
+      // Vide le buffer
+      API("Opengl32.dll", "glClear", ::GL_COLOR_BUFFER_BIT+::GL_DEPTH_BUFFER_BIT)
+      
+      // Affiche ce qui vient d'être décrit
+      :Affiche()
+     type : 458752
+   -
+     name : InitScene
+     internal_properties : CAAAAAgAAACwW27q5oFCQIa3UqtrnqsCChbWg8IaPP/zTf4Z+pRbFWqy2PAkisQ1jOQGEzLvubeGzjdfjboqNdk0AKnhjQQm98rNOhq46a5u/st5HAOwopwGnsw5RnE1DBlR3EDb22xskURQ2aWRmB3s976otEiUyCg440sxxGtyUIrOl6hvzK2iWg9wlaQFVvZyj6LPW3BzCGJsiXCvQU44W2Scj+O/Y9PgxJT2FAcMVlUzQenRrWsFXfY+b4HZ1ZIqJT/SIG7xC6ZrHt4cJaa/rN28RELejLyy
+     procedure_id : 4416108326991305236
+     type_code : 12
+     code : |1+
+      Procédure InitScene()
+      // Initialisation en fonction des dimensions du champ
+      
+      // Initialisation de la vue par rapport aux dimensions du champ
+      API("Opengl32.dll", "glViewport", 0, 0, {:m_sChamp,indChamp}..Largeur, {:m_sChamp,indChamp}..Hauteur) 
+      // Matrice utilisée
+      API("Opengl32.dll", "glMatrixMode", ::GL_PROJECTION)      
+      // Initialisation de la matrice
+      API("Opengl32.dll", "glLoadIdentity")						
+      
+      // Calcul du ratio Largeur/Hauteur du champ
+      API("Glu32.dll", "gluPerspective", 45.0, {:m_sChamp,indChamp}..Largeur/{:m_sChamp,indChamp}..Hauteur, 0.1, 100.0)
+      
+      // Matrice utilisée
+      API("Opengl32.dll", "glMatrixMode", ::GL_MODELVIEW)   
+      
+      // Initialisation de la matrice
+      API("Opengl32.dll", "glLoadIdentity")
+     type : 458752
+   -
+     name : Dessine
+     internal_properties : CAAAAAgAAACOsg7qyER2OU9jt3igs5Btyu/mx7l06c5GXxakPRXRUIswKLVBBVWkY75xL83fJwIDACBS4HgoD75NzqeFeojh32HQBzDZa3dhVmCI5ZpeX+UD7fbYZkxWF6EwkUPtrDf5beKzKTZXJu3LDbZsfpo9DPFS76tga8eX956QRYFvRP/e0Vnd9TjSRby6r1X5IFvK
+     procedure_id : 4416115169411754141
+     type_code : 12
+     code : |1-
+      Procédure Dessine()
+      // A chaque repaint il faut redemander à OpenGL de redessiner
+      
+      i est un entier
+      clFigure est un Cfigure dynamique
+      
+      // Efface l'écran en cours
+      :Efface()
+      
+      // Déplacement de la caméra
+      clFigure = allouer un CFigure
+      clFigure:TranslationCaméra(:m_XTransCaméra,:m_yTransCaméra,:m_zTransCaméra)
+      clFigure:Rotationcamera(:m_XRotCaméra,:m_yRotCaméra,:m_zRotCaméra)
+      liberer clFigure
+      
+      // Parcours du tableau des figures
+      pour i=1 _a_ dimension(:m_xTabFigure)
+      	// Figure courante
+      	clFigure = :m_xTabFigure[i]
+      	// Dessin de la figure
+      	clFigure:dessine()
+      FIN
+      
+      // Affiche ce qui vient d'être décrit
+      :Affiche()
+      
+      RENVOYER Faux
+     type : 458752
+   -
+     name : AjouteFigure
+     procedure_id : 4416122278233811005
+     type_code : 12
+     code : |1+
+      Procédure AjouteFigure(pPointeur)
+      
+      // on ajoute une case au tableau
+      dimension(:m_xTabFigure, dimension(:m_xTabFigure)+1)
+      
+      // Ajout de l'objet
+      :m_xTabFigure[dimension(:m_xTabFigure)] = pPointeur
+     type : 458752
+   -
+     name : SurvolSouris
+     procedure_id : 4416148202248429990
+     type_code : 12
+     code : |1+
+      Procédure SurvolSouris()
+      
+      SectionCritiqueDébut()
+      
+      // Si le Bouton Gauche de la souris n'est pas enfoncé, on sort
+      si ToucheEnfoncée(teBoutonG)=faux ALORS
+      	:m_nLastPosX = 0
+      	:m_nLastPosy = 0
+      	SectionCritiquefin()
+      	renvoyer faux
+      FIN
+      
+      nPosX, nPosY sont des entiers
+      nVarX, nVarY sont des entiers
+      
+      // Coordonnées souris par rapport au champ
+      nPosX = SourisPosx()
+      nPosY = SourisPosy()
+      
+      si:m_nLastPosX=nPosX et :m_nLastPosY=nPosY ALORS
+      	SectionCritiquefin()
+      	renvoyer faux
+      FIN
+      
+      SI :m_nLastPosX=0 ET :m_nLastPosy=0 ALORS
+      	:m_nLastPosX = nPosX
+      	:m_nLastPosY = nPosY
+      FIN
+      
+      // Variations de coordonnées par rapport à l'écran
+      nVarY = :m_nLastPosX - nPosX
+      nVarX = :m_nLastPosY - nPosY
+      
+      
+      // Sauvegarde des positions
+      :m_nLastPosX = nPosX
+      :m_nLastPosy = nPosY
+      
+      // Calcul de la rotation par rapport au repère actuel
+      SI nVarX>1 :m_XRotCaméra-=Abs(nVarX)
+      SI nVarX<-1 :m_XRotCaméra+=Abs(nVarX) 
+      SI :m_XRotCaméra>180 :m_XRotCaméra=-180 
+      SI :m_XRotCaméra<-180 :m_XRotCaméra=180  
+      
+      SI nVarY>1 :m_yRotCaméra-=Abs(nVarY) 
+      SI nVarY<-1 :m_yRotCaméra+=Abs(nVarY)
+      SI :m_yRotCaméra>180 :m_yRotCaméra=-180 
+      SI :m_yRotCaméra<-180 :m_yRotCaméra=180
+      
+      :Dessine()
+      
+      SectionCritiquefin()
+      renvoyer vrai
+     type : 458752
+   -
+     name : SupprimeFigure
+     procedure_id : 4416152397239176085
+     type_code : 12
+     code : |1+
+      Procédure SupprimeFigure()
+      // Libération de tous les objets
+      
+      i est un entier
+      pour i=1 _a_ dimension(:m_xTabFigure)
+      	liberer :m_xTabFigure[i]
+      FIN
+      
+      Dimension(:m_xTabFigure,0)
+      
+      :m_XRotCaméra=0
+      :m_yRotCaméra=0
+      :m_zRotCaméra=0
+      :m_XTransCaméra=0
+      :m_YTransCaméra=0
+      :m_ZTransCaméra=0
+      
+      :Efface()
+      :affiche()
+     type : 458752
+   -
+     name : Affiche
+     internal_properties : CAAAAAgAAACXC+mSUO0RH1pElF6IHfgR8QD3gZOKEl71aUMRipCQ+EzNvR8ogVbBZ955xm4ioEm8WOxd+5gANzLeiNxbCTAjOsn5FJ0326fZzDtgQmoPxKHp7jY1fbcUF6MJEbCr5yYzjzuX3j3mII9LdKijyhGMxu8tRap1hLlJP6ugEJO6vx3QVBXMukka8Q4v2w0tzKgCBg==
+     procedure_id : 4416152586713430330
+     type_code : 12
+     code : |1+
+      Procédure Affiche()
+      
+      // Affiche ce qui vient d'être décrit
+      API("gdi32.dll", "SwapBuffers", :m_hdc)
+     type : 458752
+   -
+     name : ToucheEnfonce
+     internal_properties : CAAAAAgAAAA0Z08Ga/OCqZCrsD/RYeGJVVGNvpcfrRNrlnZZ/gaxU0oxR6DXBZ2s7uOGhwQp2rK//vJpAGd4OoS8ac/E5IjBXTvmHxbrb1nxAVa25YL089uL1XCzRygVmwTyQ/OcbtcibZzP+P8HXttdcYPMvOfvezutRo9iwdY1FL4dK152b9VHsf7ytFYanHUGV8Ck+u3JeoAYujYt2V9KRmuID08bVD1Lhdl1kUu/033r+dgXtGs6m1NbzPbDfNUTda5CSMl5pyPy5ZEu99y1zmBsg+bUsl2L/jal7ymMlEA3E9GC6MCdIAXOkf+dEKC+kuqQZpYrKV4f9V/tlvIkjXuI2KkntgDyMJ4vh5BFIQkskzjBXfcnB1pcG0VSrVNPUlA51pVgWOPPT1BtvPWvku+7Y3fohqP3XAqbsVdVRlNnGYlp3KEZvJBVd9s/Jw1xZOKmoHZcbS3HOECTCyY6sBxlN0E=
+     procedure_id : 4416473124275943661
+     type_code : 12
+     code : |1-
+      Procédure ToucheEnfonce(wParam,lParam)
+      // Evénement pour gérer les touches clavier PgUp et PgDown
+      
+      selon lParam
+      	CAS 33  // PgUp
+      		// Déplacement sur l'axe z
+      		:m_ZTransCaméra+=0.5
+      		:Dessine()
+      		RENVOYER Faux
+      		
+      	CAS 34  // PgDown
+      		// Déplacement sur l'axe z
+      		:m_ZTransCaméra-=0.5
+      		:Dessine()
+      		RENVOYER Faux
+      FIN
+      
+      renvoyer vrai
+     type : 458752
+   -
+     name : Efface
+     internal_properties : CAAAAAgAAACjGY9G26goV32xhA9xQc4+d9Vd/iP8koJRc+LxweVfK/V57R9iLsxCQTFMlpFD5hWYwFlNTIlnm+AZQtEs4x4A5eZB8rriIttmtLa27812m4drckc2QsaSSMIs7nM4WmP+xtzmmXLRTQby7T+q8+4/04C4OqcoQcxKHMw/e+VlZap0kn5QVleMiFDYljxtJmM9u5BF3U/cwuLojUMIciMV2erh7DHibNmjk2AZ5IEcdp6q
+     procedure_id : 4416508999606038739
+     type_code : 12
+     code : |1-
+      Procédure Efface()
+      
+      // Vide le buffer
+      API("Opengl32.dll", "glClear", ::GL_COLOR_BUFFER_BIT+::GL_DEPTH_BUFFER_BIT)
+      
+      // Initialise la matrice
+      API("Opengl32.dll", "glLoadIdentity")	
+     type : 458752
+   -
+     name : MoletteSouris
+     internal_properties : CAAAAAgAAADFrR2ozjQqCCHEtKUzJp74coD9h9D2R16PLU6vMhxrwj/yAYSranlPfADo6/Adz/N5bc+PeVyy93/IPbiZt20jILUix6hFu5c1f1jnCn99rwXcNMfy1h8Mq3DWuO56Yih0JrK3Nemag3tMSSwqwLgJMVrgr6snopJX5iJee6mHNto9hzv3QCNZ0VnlLB1LaQqaBGbDdsBzsXVW0Q/eKaZpcn6QrNq/8WN2HGAuRUuyyqrV0GfOq1dyk+BfvZMXx5nbwE6m8zadZ1jGQg==
+     procedure_id : 4433617513487188905
+     type_code : 12
+     code : |1-
+      Procédure MoletteSouris(sMess,lParam,wParam)
+      // gestion de la molette de la souris
+      
+      // vers le haut
+      SI lParam=7864320 ALORS
+      	// Déplacement sur l'axe z
+      	:m_ZTransCaméra+=0.5
+      	:Dessine()
+      	rENVOYER Faux
+      FIN
+      
+      // vers le bas
+      SI lParam=-7864320 ALORS
+      	// Déplacement sur l'axe z
+      	:m_ZTransCaméra-=0.5
+      	:Dessine()
+      	RENVOYER Faux
+      FIN
+      
+      renvoyer vrai
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x3d465e9c21f30ff4
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      fr-FR : ChoosePixelFormat failed
+     index : 0
+   -
+     text :
+      fr-FR : SetPixelFormat failed
+     index : 1
+   -
+     text :
+      fr-FR : "wglCreateContext failed : "
+     index : 2
+   -
+     text :
+      fr-FR : Il est probable que ce problème provienne de votre carte graphique.
+     index : 3
+   -
+     text :
+      fr-FR : Votre carte graphique est-elle bien accélératrice 3D ?
+     index : 4
+   -
+     text :
+      fr-FR : Les drivers de carte graphique sont-ils compatibles OpenGL ?
+     index : 5
+   -
+     text :
+      fr-FR : Les drivers de votre carte graphique sont-ils à jour ?
+     index : 6
+   -
+     text :
+      fr-FR : La résolution de votre écran est-elle correcte ?
+     index : 7
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

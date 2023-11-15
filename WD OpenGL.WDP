@@ -1,0 +1,127 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WD OpenGL
+ major_version : 28
+ minor_version : 0
+ type : 4097
+ description : Projet WD OpenGL
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : CAAAAAgAAADrIawwfiTKPWPHYvHr2h9rlWYi5xljs1zmcv3g+pG1IjLSMMuRkz/cR9V1nNp7spq+u3IsNh1fOHN2TfxhQtNX/HD0eWNdC5fFWrW8JlCqZrZbKdvWLSywUzIIq1l4k2c4mhiIN8XfGnYf0bmuhbwITYv4BtgpNvH8+6tY2LJ/IzeVOsrBE3KOnmDsXTtm9r5Q/wiJR1NuKwdkJF+sXLnzpY55d713RzxOAxhmIlIzn5i1bRqvm6ajV2eV8LxMaTxz3pHhKnXCoNv1JtuLuTSX1bMkDeaoGafzLtleLCjVfDmW3pgmFsT7uDi/lx2RIlnsUdpbc4vq23CV/O359EKi/IxrXluhh5xp49BlL1FcoXk/ljjcRwOIDYEeuFwcC0Wti+8LdwgWs6yZRA9ir7C7OHA6N8w9KFOFgY2UNw2RB5mMlSnQgGgHZPW9ldAyFPbbrq4MG6RRGNX1qpb7HUxRR/6D30MuwwKTrrpMHqSBDqwV0AD72S2f8XxBW+Whzp2Bh8oppVaPBrIJ0Vkdsw6WsA5SEClINDZjSo9xH/rFu49eiA9S3bWk4+5vygpPko6e0EQNU9ipHqMIf+KAkn7ekS0lpeGxvXQSxZNyEbpwmkIZMY+H7RV9giD58lcNqZIx7IEp3DZBaydWCjB51Hm9RGvjr0tyEl1XZhlHLE0469bHZ2m9YDcc3kBc1GuW38yncPu4TZFbWcDJ04zIV0IzY/xEBcIB0imbsLSW39HRAy2lvtoFFO+ziBBE9anhDec9Dl+0bqnUXeOa3rnBsT5oiTXMKkfvG4JWP7bb5DNbUeWe8hYp08KRQYyFGdNfzDQgaeFarApJ3mimDTwWMOY6NwbxDmQ9s4i+NrvBF10wsUnDI2LuLe6cIU+cVJAXnErGXzHFExaBg9jSoOJd4oN5pPr8Rz5EhDOB2j2FzPYUvccs5zPAmMaMK4WkNcAnkuJZWX7z67N+s8jTwckpRv7zX+h7XyQETUalCsS/eELR3jSNFmxV9jUrzweY3VvfMjyhf9sq43HnwcPaIxza5I/QqCUw1wmS0UeZ21DDZy5rRfnmpUlXsqWQ9y6FOiE11+ChLpUOy+szluf/1h5xvVy+jldL8fPs6tMTkRgXT1Vp8FrvStxjfmV1DWczAQABcqYLvhlIWe0oGohc9EjtzYKaSLFypaxm9LjhHMsGGG0gimLg3HkEq0iF9hn2uoPYt73vu/V/w8O+wwmpGyF59N7rIkl7BGkwL+o7twtpjvLk6+n10UOz5n9nae/YZLMrwrxrNub9QzbvAjr91kyO5hQUbaZbfCe3jkgF2bZRoaCJDB8UnOj7Po/cPtuXoBx0aXxDfiuLazeYL3blfbn98m2gk9MOzGeoTG0ItI2W5akWHxfZbwa1P7IiB5WGLAlOMKmsmUe1qm02dL4toRft8YvZWFXyWutSkvukHBYn+L0MQbFolIaoqEYN5XR53CiUENY/4YS/nuMZUSkqDQkYOTxGguDoRPDyp9jJGrjWK/DlnxzqX0ZF8V72CURpTbAMIqF6ZInClIb1iCQEzpoWS3Slf6F9f2aVO9CaLpe94II3An5dYt0M1uECBr+m4eOk42fNiehaNI6tFpY676aGb+jT49FBT70ZPJ9PdJ/O+zW4K7FEM70iBZjp917Sl7X5H3aJg2biQDVUuG52XtJTL2gcJ7+Rn9KKizL8HxqPT3mG+su04+I53mJowz3nIzb+21DLx9CdclH21C80MgM7oAfJTQwpSJ/TYaH2sRFt05C4pnFxnPD58IgP/rUZCG0joaKMjDyhUdgwc9WbtRAZXVXOTgQaG52OE23rcw/Y8CugJWPdc+1wKSgIRnWHBWVxBGmJde+PGsLT51JYJGqPrQJnT5Cr70ECD2t+b8Q3Wr/6SV8yUrJE/hcGf8Kwy/jIAZjBYgA5Plxl50obz4O/vGO/yLqMa8NuD+BYBB7DFkHjZg==
+ configurations :
+  -
+    name : WD OpenGL
+    internal_properties : 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
+    configuration_id : 3367377993232427497
+    type : 1
+    generation_name : WD OpenGL.exe
+    version :
+     version : VI200030B
+     autoincrement_version : false
+    icon_filename : .\BALLONS.ICO
+    language : 1
+ elements :
+  identifier : 0x4ac603c0001d91f8
+  elements :
+   -
+     name : FEN_OpenGL
+     identifier : 0x401e8920000cb562
+     internal_properties : CAAAAAgAAACEguzI96wEJzDUyf2tdlPFttn1Zfe5aPpWojIKUxrydpqgdNBF83QvXccxjxfJsSeRkQ==
+     physical_name : .\FEN_OpenGL.wdw
+     type : 2
+   -
+     name : CFigure
+     identifier : 0x401e89200005b562
+     internal_properties : CAAAAAgAAACwjug086gAGySI/QFhOycRThO9PSMkXVZW/fXSHOOpr1XZP4WRryhjgbslkxPNtSuVnQ==
+     physical_name : .\CFigure.wdc
+     type : 4
+   -
+     name : COpenGL
+     identifier : 0x401e89200006b562
+     internal_properties : CAAAAAgAAAAlIQ0RrstjfMubgDR0L3x6RxRCmloPDHSPlA5QasNLzU/RKat+uj12lI4I8LAg2MgwMA==
+     physical_name : .\COpenGL.wdc
+     type : 4
+   -
+     name : CSphere
+     identifier : 0x401e89200007b562
+     internal_properties : CAAAAAgAAAAZdcHF4l/X2Od3vEAg/Nhev+6mPhbfV7iqgDKlI+ymqqqqDEjSbumiwHpkXCTcpBT8BA==
+     physical_name : .\CSphere.wdc
+     type : 4
+   -
+     name : ProceduresGlobales
+     identifier : 0x401e89200004b562
+     internal_properties : CAAAAAgAAAAjHxsPvOnB2uVJukLSx85gVSagYG7nkqaOe39I7FND3SuRBU/YYOegwnxmUtIO6t4mLg==
+     physical_name : .\ProceduresGlobales.wdg
+     type : 7
+   -
+     name : CCubeTexturé
+     identifier : 0x401e89200009b562
+     internal_properties : CAAAAAgAAABs6kRQbxQcz5gskaXF4yulEkfh4edAiOy28aUiDAORT/0B132tS8yH5V9Zp29hGY95+Q==
+     physical_name : .\CCubeTexture.wdc
+     type : 4
+   -
+     name : CCube
+     identifier : 0x401e8920000bb562
+     internal_properties : CAAAAAgAAAB92VVJdiOLlKMDeIyci6SKz5zKArS1OGBOrwfA4C/vKdNdvQcWIqXeDDagGJhIMKBo6A==
+     physical_name : .\CCube.wdc
+     type : 4
+   -
+     name : CCylindre
+     identifier : 0x401e8920000ab562
+     internal_properties : CAAAAAgAAADlYc3R7oujvAvbwPS0dLwik8KaMho78vaKHJp1U9y+eoKCVPA++n02VM7IMPDgmAjwcA==
+     physical_name : .\CCylindre.wdc
+     type : 4
+   -
+     name : CCone
+     identifier : 0x401e8920000db562
+     internal_properties : CAAAAAgAAADUsjx4Rzx0d8Bk2e29roOF5vm1tZGCPsmilh7pzVI6jqJYvCj1A4Q/rZcB/4d5AffBQQ==
+     physical_name : .\CCone.wdc
+     type : 4
+  other_elements :
+   -
+     physical_name : .\Description.rtf
+   -
+     physical_name : .\Description.gif
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ report_and_queries_enabled : false
+ common_generation_directory : true
+ languages :
+  - fr-FR
+ wd_style_sheet : ".\\WD OpenGL.sty\r\n.\\WD7 OpenGL.gab"
+ code_elements :
+  internal_properties : CAAAAAgAAADB13sOoUgX3JvIBSd1by8Yz9CRtKU3xYRLb+03ijj4hZ86o1PBfR3p8MP55FlrsW3yc33XqDKQrWDV4N8VgI6N
+  type_code : 0
+  p_codes :
+   -
+     code : |1-
+      
+     type : 196608
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+  orphans :
+   -
+     name : WD OpenGL
+     identifier : 0x4ac603c000299275
+     code_elements :
+      type_code : 159
+      p_codes : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+rad :
+ internal_properties : CAAAAAgAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

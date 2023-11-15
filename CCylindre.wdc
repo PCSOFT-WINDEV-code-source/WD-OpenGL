@@ -1,0 +1,106 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CCylindre
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d4926bd3467f568
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CCylindre est une classe
+      	hérite de CFigure
+      	
+      	// Paramètre de l'objet
+      	m_baseRadius est un reel	// angle à la base
+        	m_topRadius est un reel		// angle au sommet
+        	m_height est un reel		// Hauteur
+        	m_slices est un entier		// Nombre de subdivisions autour de l'axe z
+        	m_stacks est un entier		// Nombre de subdivisions le ,long de l'axe z
+      
+      Fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 4416103503334012264
+     type_code : 27
+     code : |1+
+      Procédure Constructeur()
+      Constructeur CFigure()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 4416103503240426856
+     type_code : 28
+     code : |1+
+      Procédure Destructeur()
+      
+     type : 655360
+   -
+     name : Dessine
+     internal_properties : CAAAAAgAAAAdRfm3K7FiedkuEczawjXI1nbuc/ZgvPmcnDQg5QmYx24uhRv92jzIW7nBNhYi+gRV23oPJJMnk9J98DVoISpqMVqA3zdVe5RHDLFsJLJVcEuvDnR5/oho0wuhx50M3SXR0A2PBrw2vj9GobvvHwhJOhxF12r8JLdBujhzMvFtQemg/ZlvhiRBXQpSjCnoGzOPYhdcdKMlsxVEhTurIF039iAgA0YGma5yORRhPrbJocICjQyhoGM65kVeOk5p
+     procedure_id : 4416103920281743597
+     type_code : 12
+     code : |1+
+      Procédure VIRTUELLE Dessine()		
+      
+      // Repositionnement à l'origine
+      API("Opengl32.dll", "glPushMatrix")
+                    
+      // Création de l'objet
+      obj est un entier
+      obj = API("Glu32.dll", "gluNewQuadric")        
+                    
+      // Déplacement dans l'espace
+      :Deplace()      
+      		                
+      // Couleur
+      :Colorie()
+                       
+      API("Glu32.dll", "gluCylinder", obj, :m_baseRadius, :m_topRadius, :m_height, :m_slices, :m_stacks)
+            
+      API("Opengl32.dll", "glPopMatrix")
+      
+      
+     type : 458752
+   -
+     name : SetParam
+     procedure_id : 2107019322305808040
+     type_code : 12
+     code : |1+
+      PROCEDURE VIRTUELLE SetParam(pnBaseRadius est un réel=1.0, pnTopRadius est un réel = 1.0, pnHeight est un réel =2.0, pnSlices est un entier = 16, pnStacks est un entier = 16) <multisyntaxe> 
+      // pnBaseRadius : rayon à la base
+      // pnTopRadius : rayon  au sommet
+      // pnHeight :  Hauteur
+      // pnSlices : Nombre de subdivisions autour de l'axe z
+      // pnStacks : Nombre de subdivisions le long de l'axe z
+      
+      
+      // Propriétés de l'objet
+      :m_baseRadius = pnBaseRadius
+      :m_topRadius  = pnTopRadius
+      :m_height 	  = pnHeight
+      :m_slices 	  = pnSlices
+      :m_stacks 	  = pnStacks
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1fc4cfb40091282b
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
+associated_test :
+ name : TEST_Cylindre.wxt

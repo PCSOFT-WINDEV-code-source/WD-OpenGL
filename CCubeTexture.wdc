@@ -1,0 +1,199 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CCubeTexturé
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x3d6a457c34239c93
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CCubeTexturé est une classe
+      	hérite de CCube
+      Fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 4425425983825288386
+     type_code : 27
+     code : |1+
+      Procédure Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 4425425982942321858
+     type_code : 28
+     code : |1+
+      Procédure Destructeur()
+      
+     type : 655360
+   -
+     name : Dessine
+     internal_properties : CAAAAAgAAACVTkrarKZP8g0t1jNLOGmQ8dw/0IhY34KQVxukN1fFKsor49KVJoL5UaqyXtveTF7030cvPPNTkJNomPCBgu8prlMt7Mk/xDFBpKqpPEuBYNTcKygNmeRzsBGUL+BVSY6W1FAN2P8Wwi8la2Pvt1eh9KGDsa9fLdlACNeCMzTCSzihWBkCHHnfw3S+9zaAE4eC54M0r0xXwkxGEZeqwTQizcyqz2pusqbTZKR9XFxNH/gmiBOtBsuoqAdoqQ9vEExWUv7h/qOmHbh02RNe6R35ECjmT/WbKdqK+8M0PdxephAJ4lz21HpEHrz5yreeO9qsdhm8iTElG3g4p2nXOauq74kLZpjEfZ/RmeG157Ui6yft7GJD4MsyGxDZ5VGSMvbXhUX2g4QMIPtdusZWG94WV/tLEwTobjmiDsHidTO+l3cm01lTMHv/Fs1D9OGBJwDqSTZUas7xdPcUccu3TSbp0d39j1CMWD2x3+Fh/bwVABDyGZj5/HMFJkOIdBzrYgav7k8ifW3B0mnE6tBRfB931EGC53lzoBTHirLmN9OzQmyPxAXjJvdw0T4JA7y/Y5HnsScJLCO3cM5g/zBEJR2jR6qeJVYp1+aE21zFVnrss9LJp4nQvjWGzJlL+qtPRuNhJrAWMIX/cn1eEdFsGgxO5/bwWvbBo2OYa2MnhZkBWtvGzU68epyd
+     procedure_id : 4425426803106546949
+     type_code : 12
+     code : |1+
+      Procédure virtuelle Dessine()
+      
+      // Déplacement dans l'espace
+      :Déplace()
+      
+      //Active le texturing 
+      API("Opengl32.dll", "glEnable", ::GL_TEXTURE_2D)
+      
+      // Début du dessin
+      API("Opengl32.dll", "glBegin", ::GL_QUADS)	
+      
+      ///////////////////////  FACE 1  //////////////////////////
+      API("Opengl32.dll", "glNormal3d", 0.0, 1.0, 0.0)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 0.0)	
+      API("Opengl32.dll", "glVertex3d",  1.0, 1.0 ,-1.0 )		// Coin Haut droit (Haut)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d", -1.0, 1.0 ,-1.0 )		// Coin Haut gauche (Haut)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d", -1.0, 1.0 , 1.0 )		// Coin bas gauche (Haut)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0, 1.0 , 1.0 )		// Coin bas droit (Haut)
+      
+      
+      ///////////////////////  FACE 2  //////////////////////////
+      API("Opengl32.dll", "glNormal3d", 0.0, -1.0, 0.0)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 0.0)	
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 , 1.0 )		// Coin Haut droit (Bas)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 , 1.0 )		// Coin Haut gauche (Bas)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 ,-1.0 )		// Coin bas gauche (Bas)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 ,-1.0 )		// Coin bas droit (Bas)
+      
+      
+      ///////////////////////  FACE 3  //////////////////////////
+      API("Opengl32.dll", "glNormal3d", 0.0, 0.0, 1.0)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 0.0)	
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 , 1.0 )		// Coin Haut droit (Avant)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 , 1.0 )		// Coin Haut gauche (Avant)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 , 1.0 )		// Coin bas gauche (Avant)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 , 1.0 )		// Coin bas droit (Avant)
+      
+      
+      ///////////////////////  FACE 4  //////////////////////////
+      API("Opengl32.dll", "glNormal3d", 0.0, 0.0, -1.0)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 0.0)	
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 ,-1.0 )		// Coin Haut droit (Arrière)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 ,-1.0 )		// Coin Haut gauche (Arrière)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 ,-1.0 )		// Coin bas gauche (Arrière)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 ,-1.0 )		// Coin bas droit (Arrière)
+      
+      
+      ///////////////////////  FACE 5  //////////////////////////
+      API("Opengl32.dll", "glNormal3d", -1.0, 0.0, 0.0)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 0.0)	
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 , 1.0 )		// Coin Haut droit (Gauche)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 , 1.0 ,-1.0 )		// Coin Haut gauche (Gauche)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 ,-1.0 )		// Coin bas gauche (Gauche)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 1.0)
+      API("Opengl32.dll", "glVertex3d", -1.0 ,-1.0 , 1.0 )		// Coin bas droit (Gauche)
+      
+      
+      ///////////////////////  FACE 6  //////////////////////////
+      API("Opengl32.dll", "glNormal3d", 1.0, 0.0, 0.0)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 0.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 ,-1.0 )		// Coin Haut droit (Droite)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 0.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 , 1.0 , 1.0 )		// Coin Haut gauche (Droite)
+      API("Opengl32.dll", "glTexCoord2d", 0.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 , 1.0 )		// Coin bas gauche (Droite)
+      API("Opengl32.dll", "glTexCoord2d", 1.0, 1.0)
+      API("Opengl32.dll", "glVertex3d",  1.0 ,-1.0 ,-1.0 )		// Coin bas droit (Droite)
+      
+      // Fin du dessin
+      API("Opengl32.dll", "glEnd")
+      		
+      //Désactive le texturing 
+      API("Opengl32.dll", "glDisable", ::GL_TEXTURE_2D)
+     type : 458752
+   -
+     name : InitTexture
+     internal_properties : CAAAAAgAAABlENSVZ+AlUsbQc+Z8QgWxfLE2DaRmWZ50BIwRZV9UVLS2/yw3TFZFKLBU+K2IHYJyEc2HgFESFgaTE0bXvH2k0b+mQzhaaTxAakJiIfhRkzHrxIj9Os7IKtLfEhiR1XsHocZbWKEr7udSbV7XAzG86thNou0yJnDiUigxuzEJW9Anz32XFXgfd8r/orYzze7AMh/swhvdYRUj9ddkDBG/WmvCfHFh3dRBE387WASHFUgB+jO41sAHADgNSxsWN76rVETom4i5/LUKPRnBtr7YR2WI32fdTJhdaMI+cuJ1VSajcF8aVdEsLmQn4L+GjoFA5A==
+     procedure_id : 4425446599409654263
+     type_code : 12
+     code : |1+
+      Procédure InitTexture(psNomChampImage)
+      // Mise en mémoire de la texture
+      
+      NomTex est un entier
+      
+      // Largeur et Hauteur de l'image
+      nLargeur, nHauteur sont des entiers
+      nLargeur = {psNomChampImage,indchamp}..largeur
+      nHauteur = {psNomChampImage,indchamp}..hauteur
+      
+      // L'image est chargée en mémoire dans un tableau
+      // 4 cellule de tableau de 1 octet sont nécéssaires pour chaque pixel de l'image
+      nTabPixelCouleur est tableau de nLargeur*nHauteur*4 entiers sans signe sur 1 octet
+      
+      nPixelCouleur est un entier
+      i,j,k sont des entiers
+      
+      // Pour chaque ligne et colonne de l'image
+      POUR j=1 A nHauteur
+      	POUR i=1 A nLargeur
+      		// Identification de la couleur du pixel sélectionné
+      		nPixelCouleur = dPixelCouleur(psNomChampImage, i-1, j-1)
+      	    // Correspondance
+      		k = (j-1)*4*nHauteur + (i-1)*4
+      		// Tableau de la texture
+      		nTabPixelCouleur[k+1] = modulo(nPixelCouleur,256)
+      		nTabPixelCouleur[k+2] = modulo(nPixelCouleur/256,256)
+      		nTabPixelCouleur[k+3] = modulo(nPixelCouleur/256/256,256)
+      		nTabPixelCouleur[k+4] = 0 
+      	FIN
+      FIN
+      
+      // Fin d'utilisation du champ image
+      dFinDessin(psNomChampImage)
+      
+      // efface la précédente texture
+      API("Opengl32.dll", "glDeleteTextures", 1,  &NomTex)
+      
+      // Génèration d'un numéro de texture 
+      API("Opengl32.dll", "glGenTextures", 1, &NomTex)
+      
+      // Sélection de cette texture 
+      API("Opengl32.dll", "glBindTexture", ::GL_TEXTURE_2D, NomTex)	
+      
+      // Caractéristiques de l'image 
+      API("Opengl32.dll", "glTexImage2D",::GL_TEXTURE_2D, 0, 4, nLargeur,nHauteur,0,::GL_RGBa,::GL_UNSIGNED_BYTE,&nTabPixelCouleur)	
+      
+      //Addresse de l'image 	
+      API("Opengl32.dll", "glTexParameteri", ::GL_TEXTURE_2D, ::GL_TEXTURE_MAG_FILTER, ::GL_LINEAR)	
+      API("Opengl32.dll", "glTexParameteri", ::GL_TEXTURE_2D, ::GL_TEXTURE_MIN_FILTER, ::GL_LINEAR)			
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x1fc4cfb40079280c
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
